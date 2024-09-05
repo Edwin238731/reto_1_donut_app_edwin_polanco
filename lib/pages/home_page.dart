@@ -42,11 +42,11 @@ class _HomePageState extends State<HomePage> {
             )
           ],
         ),
-        body: Column(
+        body: const Column(
           children: [
 //texto
             Padding(
-              padding: const EdgeInsets.only(left: 35.0),
+              padding: EdgeInsets.only(left: 35.0),
               child: Row(
                 children: [
                   Text('I want to ', style: TextStyle(fontSize: 35)),
