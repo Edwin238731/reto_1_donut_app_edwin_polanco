@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:reto_1_donut_app_edwin_polanco/tab/Pancake_tab.dart';
-import 'package:reto_1_donut_app_edwin_polanco/tab/Pizza_tab.dart';
+import 'package:reto_1_donut_app_edwin_polanco/tab/pancake_tab.dart';
+import 'package:reto_1_donut_app_edwin_polanco/tab/pizza_tab.dart';
 import 'package:reto_1_donut_app_edwin_polanco/tab/burger_tab.dart';
 import 'package:reto_1_donut_app_edwin_polanco/tab/donut_tab.dart';
 import 'package:reto_1_donut_app_edwin_polanco/tab/smoothie_tab.dart';
