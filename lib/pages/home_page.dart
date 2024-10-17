@@ -15,27 +15,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<Widget> myTabs = [
-    //donut table
-    const MyTab(
-      iconPath: 'lib/icons/donut.png',
-    ),
-    //burguer table
-    const MyTab(
-      iconPath: 'lib/icons/burger.png',
-    ),
-    //smoothie table
-    const MyTab(
-      iconPath: 'lib/icons/smoothie.png',
-    ),
-    //pancake table
-    const MyTab(
-      iconPath: 'lib/icons/pancakes.png',
-    ),
-    //pizza table
-    const MyTab(
-      iconPath: 'lib/icons/pizza.png',
-    )
+    const MyTab(iconPath: 'lib/icons/donut.png', name: 'Donut'),
+    const MyTab(iconPath: 'lib/icons/burger.png', name: 'Burger'),
+    const MyTab(iconPath: 'lib/icons/smoothie.png', name: 'Smoothie'),
+    const MyTab(iconPath: 'lib/icons/pancakes.png', name: 'Pancake'),
+    const MyTab(iconPath: 'lib/icons/pizza.png', name: 'Pizza'),
   ];
+
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -57,12 +44,11 @@ class _HomePageState extends State<HomePage> {
                 icon: Icon(Icons.person, color: Colors.grey[800], size: 36),
                 onPressed: () {},
               ),
-            )
+            ),
           ],
         ),
         body: Column(
           children: [
-            //Texto "I want to eat"
             const Padding(
               padding: EdgeInsets.all(24.0),
               child: Row(
@@ -74,35 +60,55 @@ class _HomePageState extends State<HomePage> {
                   Text(
                     'EAT',
                     style: TextStyle(
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold,
-                        decoration: TextDecoration.underline),
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline,
+                    ),
                   ),
                 ],
               ),
             ),
-            //Tap bar
             TabBar(tabs: myTabs),
-            //Tap bar view
             const Expanded(
-                child: TabBarView(
-              children: [
-                //Donut
-                DonutTab(),
-                //Burger
-                BurgerTab(),
-                //Smoothie
-                SmoothieTab(),
-                //Pancake
-                PancakeTab(),
-                //Pizza
-                PizzaTab(),
-              ],
-            ))
-            //Carrito
+              child: TabBarView(
+                children: [
+                  DonutTab(),
+                  BurgerTab(),
+                  SmoothieTab(),
+                  PancakeTab(),
+                  PizzaTab(),
+                ],
+              ),
+            ),
           ],
+        ),
+        bottomNavigationBar: BottomAppBar(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.home),
+                onPressed: () {
+                  // Acción para el botón de inicio
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.search),
+                onPressed: () {
+                  // Acción para el botón de buscar
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.person),
+                onPressed: () {
+                  // Acción para el botón de perfil
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 }
+

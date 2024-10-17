@@ -7,8 +7,9 @@ class BurgerTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: const Center(
-        child: Text('burgerTab'),
+        child: Text('Burger Tab Content'),
       ),
     );
   }
 }
+
