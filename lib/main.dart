@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reto1_donut_app_victor_pasos/pages/home_page.dart';
+import 'package:reto1_donut_app_edwin_polanco/pages/home_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,6 +11,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const HomePage(),
       theme: ThemeData(
           tabBarTheme: const TabBarTheme(indicatorColor: Colors.pink)),
